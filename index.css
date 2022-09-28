@@ -361,7 +361,7 @@ main .container section .contain .data .info-2 .num {
         gap: 6px;
     }
     main .container section .contain article::after {
-        top: 105%;
+        top: 1%;
     }
     main .container section .contain article::after {
         height: 2px;
