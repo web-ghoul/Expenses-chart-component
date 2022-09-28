@@ -1,0 +1,448 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background-color: hsl(27, 66%, 92%);
+}
+
+main .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main .container header .contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(10, 79%, 65%);
+    gap: 300px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+main .container header .text {
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    color: hsl(33, 100%, 98%);
+}
+
+main .container header .text .head {
+    font-size: 16px;
+}
+
+main .container header .text span.price {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+main .container header .shape {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main .container header .shape span {
+    background-color: hsl(25, 47%, 15%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+}
+
+main .container header .shape span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: transparent;
+    border: 2px solid hsl(33, 100%, 98%);
+    z-index: 2;
+}
+
+main .container section .contain {
+    border-radius: 15px;
+    padding: 25px;
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    gap: 50px;
+    background-color: hsl(33, 100%, 98%);
+}
+
+main .container section .contain .head {
+    font-size: 30px;
+    color: hsl(25, 47%, 15%);
+    font-weight: 800;
+}
+
+main .container section .contain article {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: flex-end;
+    color: hsl(28, 10%, 53%);
+    gap: 10px;
+    height: 200px;
+    position: relative;
+}
+
+main .container section .contain article span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container section .contain article span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -170px;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 160px;
+    border-radius: 5px;
+    background-color: hsl(10, 79%, 65%);
+}
+
+main .container section .contain article span:hover:after {
+    cursor: pointer;
+    opacity: .5;
+}
+
+main .container section .contain article span::before {
+    content: "$52.38";
+    position: absolute;
+    background-color: hsl(25, 47%, 15%);
+    color: hsl(33, 100%, 98%);
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 15px;
+    transition: ease-in-out .3s;
+    top: -205px;
+    opacity: 0;
+}
+
+main .container section .contain article span:hover:before {
+    opacity: 1;
+    cursor: pointer;
+}
+
+main .container section .contain article span:first-child:before {
+    content: "$67.34";
+    top: -115px;
+}
+
+main .container section .contain article span:nth-child(2):before {
+    content: "$78.34";
+    top: -155px;
+}
+
+main .container section .contain article span:nth-child(4):before {
+    content: "$78.34";
+    top: -145px;
+}
+
+main .container section .contain article span:nth-child(5):before {
+    content: "$78.34";
+    top: -130px;
+}
+
+main .container section .contain article span:nth-child(6):before {
+    content: "$78.34";
+    top: -170px;
+}
+
+main .container section .contain article span:nth-child(7):before {
+    content: "$78.34";
+    top: -140px;
+}
+
+main .container section .contain article span:first-child:after {
+    top: -80px;
+    height: 70px;
+}
+
+main .container section .contain article span:nth-child(2)::after {
+    top: -120px;
+    height: 110px;
+}
+
+main .container section .contain article span:nth-child(3)::after {
+    background-color: hsl(186, 34%, 60%);
+}
+
+main .container section .contain article span:nth-child(4)::after {
+    top: -110px;
+    height: 100px;
+}
+
+main .container section .contain article span:nth-child(5)::after {
+    top: -95px;
+    height: 85px;
+}
+
+main .container section .contain article span:nth-child(6)::after {
+    top: -135px;
+    height: 125px;
+}
+
+main .container section .contain article span:nth-child(7)::after {
+    top: -105px;
+    height: 95px;
+}
+
+main .container section .contain article::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(27, 66%, 92%);
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    top: calc(100% + 30px);
+}
+
+main .container section .contain .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+main .container section .contain .data>div {
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+main .container section .contain .data div>span {
+    font-size: 16px;
+    color: hsl(28, 10%, 53%);
+}
+
+main .container section .contain .data .info-1 .num {
+    font-size: 40px;
+    font-weight: 800;
+    color: hsl(25, 47%, 15%);
+}
+
+main .container section .contain .data .info-2 {
+    justify-content: flex-end;
+}
+
+main .container section .contain .data .info-2 .num {
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    justify-content: flex-end;
+    color: hsl(25, 47%, 15%);
+    align-items: center;
+}
+
+@media (max-width:1200px) {
+    main .container {
+        gap: 18px;
+    }
+    main .container header .contain {
+        gap: 280px;
+        border-radius: 12px;
+        padding: 22px;
+    }
+    main .container header .text {
+        gap: 8px;
+    }
+    main .container header .text .head {
+        font-size: 14px;
+    }
+    main .container header .text span.price {
+        font-size: 25px;
+    }
+    main .container header .shape span {
+        width: 42px;
+        height: 42px;
+    }
+    main .container header .shape span::after {
+        width: calc(100% - 3px);
+        height: calc(100% - 3px);
+    }
+    main .container section .contain {
+        border-radius: 12px;
+        padding: 22px;
+        justify-content: stretch;
+        gap: 40px;
+    }
+    main .container section .contain .head {
+        font-size: 25px;
+    }
+    main .container section .contain article {
+        gap: 8px;
+    }
+    main .container section .contain article::after {
+        height: 2px;
+        top: calc(100% + 30px);
+    }
+    main .container section .contain article span::after {
+        width: 42px;
+    }
+    main .container section .contain .data {
+        gap: 18px;
+    }
+    main .container section .contain .data>div {
+        gap: 8px;
+    }
+    main .container section .contain .data div>span {
+        font-size: 14px;
+    }
+    main .container section .contain .data .info-1 .num {
+        font-size: 35px;
+    }
+    main .container section .contain .data .info-2 .num {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:992px) {
+    main .container {
+        gap: 16px;
+    }
+    main .container header .contain {
+        gap: 250px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    main .container header .text {
+        gap: 6px;
+    }
+    main .container header .text .head {
+        font-size: 12px;
+    }
+    main .container header .text span.price {
+        font-size: 22px;
+    }
+    main .container header .shape span {
+        width: 40px;
+        height: 40px;
+    }
+    main .container header .shape span::after {
+        width: calc(100% - 5px);
+        height: calc(100% - 5px);
+    }
+    main .container section .contain {
+        border-radius: 10px;
+        padding: 20px;
+        justify-content: stretch;
+        gap: 35px;
+    }
+    main .container section .contain .head {
+        font-size: 22px;
+    }
+    main .container section .contain article {
+        gap: 6px;
+    }
+    main .container section .contain article::after {
+        top: 105%;
+    }
+    main .container section .contain article::after {
+        height: 2px;
+        top: calc(100% + 30px);
+    }
+    main .container section .contain article span::after {
+        width: 40px;
+    }
+    main .container section .contain .data {
+        gap: 16px;
+    }
+    main .container section .contain .data>div {
+        gap: 6px;
+    }
+    main .container section .contain .data div>span {
+        font-size: 12px;
+    }
+    main .container section .contain .data .info-1 .num {
+        font-size: 30px;
+    }
+    main .container section .contain .data .info-2 .num {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:768px) {
+    main .container {
+        gap: 14px;
+    }
+    main .container header .contain {
+        gap: 240px;
+        border-radius: 8px;
+        padding: 18px;
+    }
+    main .container header .text {
+        gap: 4px;
+    }
+    main .container header .text .head {
+        font-size: 10px;
+    }
+    main .container header .text span.price {
+        font-size: 20px;
+    }
+    main .container header .shape span {
+        width: 35px;
+        height: 35px;
+    }
+    main .container header .shape span::after {
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+    }
+    main .container section .contain {
+        border-radius: 8px;
+        padding: 18px;
+        gap: 30px;
+    }
+    main .container section .contain .head {
+        font-size: 20px;
+    }
+    main .container section .contain article {
+        gap: 4px;
+    }
+    main .container section .contain article span::after {
+        width: 35px;
+    }
+    main .container section .contain article::after {
+        top: 107%;
+    }
+    main .container section .contain .data {
+        gap: 14px;
+    }
+    main .container section .contain .data>div {
+        gap: 4px;
+    }
+    main .container section .contain .data div>span {
+        font-size: 10px;
+    }
+    main .container section .contain .data .info-1 .num {
+        font-size: 25px;
+    }
+    main .container section .contain .data .info-2 .num {
+        font-size: 14px;
+    }
+}
